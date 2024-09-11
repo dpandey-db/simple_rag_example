@@ -1,7 +1,7 @@
 # simple_rag_example
 simplified example of creating and deploying a RAG agent based on https://github.com/databricks/genai-cookbook
 
-#### How to Use
+### How to Use
 
 ##### Option 1:
 if you already have a vector search index:
