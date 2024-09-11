@@ -1,5 +1,5 @@
-# simple_rag_example
-simplified example of creating and deploying a RAG agent based on https://github.com/databricks/genai-cookbook
+
+##### A simplified example of creating and deploying a RAG agent based on https://github.com/databricks/genai-cookbook
 
 ### How to Use
 
