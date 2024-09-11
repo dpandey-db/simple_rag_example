@@ -8,6 +8,13 @@ embedding_config:
   embedding_tokenizer:
     tokenizer_model_name: Alibaba-NLP/gte-large-en-v1.5
     tokenizer_source: hugging_face
+#for canada-eh
+#embedding_config:
+#  embedding_endpoint_name: bge_m3
+#  embedding_tokenizer:
+#    tokenizer_model_name: BAAI/bge-m3
+#    tokenizer_source: hugging_face
+
 pipeline_config:
   chunker:
     config:

@@ -23,6 +23,7 @@ with open('create_vector_search_index_config.yaml', 'r') as file:
 vectorsearch_index_name =  config['vectorsearch_index_name']
 chunked_docs_table_name = config['chunked_docs_table_name']
 vector_search_endpoint_name = config['vector_search_endpoint_name']
+embedding_endpoint_name = config['embedding_endpoint_name']
 pipeline_type = config['pipeline_type']
 
 
@@ -47,7 +48,7 @@ vsc = VectorSearchClient(disable_notice=True)
 # COMMAND ----------
 
 # DBTITLE 1,Index Management Workflow
-force_delete = True
+force_delete = False
 
 
 def find_index(endpoint_name, index_name):
@@ -74,7 +75,7 @@ if create_index:
         source_table_name=chunked_docs_table_name,
         pipeline_type=pipeline_type,
         embedding_source_column="chunked_text",
-        embedding_model_endpoint_name=vector_search_endpoint_name
+        embedding_model_endpoint_name=embedding_endpoint_name
     )
 
 
