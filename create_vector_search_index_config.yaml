@@ -1,0 +1,4 @@
+chunked_docs_table_name: benmackenzie_catalog.rag_benmackenzie.my_agent_app_chunked_docs_gold
+vectorsearch_index_name: benmackenzie_catalog.rag_benmackenzie.my_agent_app_chunked_docs_gold_index
+vector_search_endpoint_name: bmac-endpoint
+pipeline_type: TRIGGERED

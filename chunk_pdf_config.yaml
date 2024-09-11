@@ -1,0 +1,18 @@
+tables_config:
+  source_path: /Volumes/benmackenzie_catalog/rag_benmackenzie/source_docs
+  raw_files_table_name: benmackenzie_catalog.rag_benmackenzie.my_agent_app_raw_files_bronze
+  parsed_docs_table_name: benmackenzie_catalog.rag_benmackenzie.my_agent_app_parsed_docs_sliver
+  chunked_docs_table_name: benmackenzie_catalog.rag_benmackenzie.my_agent_app_chunked_docs_gold
+embedding_config:
+  embedding_endpoint_name: databricks-gte-large-en
+  embedding_tokenizer:
+    tokenizer_model_name: Alibaba-NLP/gte-large-en-v1.5
+    tokenizer_source: hugging_face
+pipeline_config:
+  chunker:
+    config:
+      chunk_overlap_tokens: 256
+      chunk_size_tokens: 1024
+    name: langchain_recursive_char
+  
+  
